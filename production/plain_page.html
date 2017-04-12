@@ -17,9 +17,33 @@
     <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- iCheck -->
     <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+    <!-- bootstrap-daterangepicker -->
+    <link href="../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.min.css" rel="stylesheet">
+
+    <style>
+      /*顶部条件搜索样式，设置后响应式失效*/
+      .col-lg-3 {
+        width: 20%;
+        padding-left: 0;
+        padding-right: 0;
+      }
+      .form-horizontal .control-label {
+        text-align: inherit;
+      }
+      .col-md-3 {
+        padding-right: 0;
+        padding-left: 0;
+        width: 18%;
+      }
+      .col-md-9 {
+        padding-left: 0;
+        padding-right: 0;
+        width: 80%;
+      }
+    </style>
   </head>
 
   <body class="nav-md">
@@ -268,7 +292,7 @@
         </div>
         <!-- /top navigation -->
 
-        <!-- page content -->
+        <!-- page content 页面内容-->
         <div class="right_col" role="main">
           <div class="">
             <div class="page-title">
@@ -294,19 +318,56 @@
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <div class="col-lg-2">
-                      <label>关键字:</label>
-                      <input type="text" class="form-control" placeholder="关键字搜索...">
-                    </div>
-                    <div class="col-lg-3">
-                      <div class="input-group">
-                        <input type="text" class="form-control" placeholder="关键字搜索...">
-                        <span class="input-group-btn">
-                          <button class="btn btn-default" type="button">Go!</button>
-                        </span>
+                    <form class="form-horizontal form-label-left">
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label col-md-3 col-sm-3 col-xs-12">关键字:</label>
+                          <div class="col-md-9 col-sm-9 col-xs-12">
+                            <input type="text" class="form-control" placeholder="请输入关键字">
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                    <a href="#" class="btn btn-info"><i class="fa fa-plus"></i> 新增</a>
+                      <div class="col-lg-2">
+                        <div class="form-group">
+                          <label class="control-label col-md-3 col-sm-3 col-xs-12">选择</label>
+                          <div class="col-md-9 col-sm-9 col-xs-12">
+                            <select class="form-control">
+                              <option>选择选项</option>
+                              <option>选项一</option>
+                              <option>选项二</option>
+                              <option>选项三</option>
+                              <option>选项四</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label col-md-3 col-sm-3 col-xs-12">时间范围</label>
+                          <div class="col-md-9 col-sm-9 col-xs-12">
+                            <div class="control-group">
+                              <div class="controls">
+                                <div class="input-prepend input-group">
+                                  <span class="add-on input-group-addon"><i class="glyphicon glyphicon-calendar fa fa-calendar"></i></span>
+                                  <input type="text" name="reservation" id="reservation" class="form-control" value="2017-04-12 - 2017-04-13" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-2">
+                        <div class="input-group">
+                          <input type="text" class="form-control" placeholder="关键字搜索...">
+                          <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">搜索</button>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="col-lg-1">
+                        <a href="plain_form_page.html" class="btn btn-info"><i class="fa fa-plus"></i> 新增</a>
+                      </div>
+                    </form>
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
@@ -580,6 +641,9 @@
     <script src="../vendors/nprogress/nprogress.js"></script>
     <!-- iCheck -->
     <script src="../vendors/iCheck/icheck.min.js"></script>
+    <!-- bootstrap-daterangepicker -->
+    <script src="../vendors/moment/moment-zh-CN.min.js"></script>
+    <script src="../vendors/bootstrap-daterangepicker/daterangepicker-zh-CN.min.js"></script>
     
     <!-- Custom Theme Scripts -->
     <script src="../build/js/custom.min.js"></script>

@@ -1768,9 +1768,10 @@ if (typeof NProgress != 'undefined') {
 
 			$('#reservation-time').daterangepicker({
 			  timePicker: true,
-			  timePickerIncrement: 30,
+			  //timePickerIncrement: 30,	//时间的增量，单位为分钟
+              timePicker24Hour: true,	//是否使用24小时制来显示时间
 			  locale: {
-				format: 'MM/DD/YYYY h:mm A'
+				format: 'YYYY-MM-DD HH:mm'
 			  }
 			});
 	

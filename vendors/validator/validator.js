@@ -15,21 +15,21 @@ var validator = (function($){
     /* general text messages
     */
     message = {
-        invalid         : 'invalid input',
-        checked         : 'must be checked',
-        empty           : 'please put something here',
-        min             : 'input is too short',
-        max             : 'input is too long',
-        number_min      : 'too low',
-        number_max      : 'too high',
-        url             : 'invalid URL',
-        number          : 'not a number',
-        email           : 'email address is invalid',
-        email_repeat    : 'emails do not match',
-        password_repeat : 'passwords do not match',
-        repeat          : 'no match',
-        complete        : 'input is not complete',
-        select          : 'Please select an option'
+        invalid         : '输入无效',
+        checked         : '必须检查',
+        empty           : '这个值是必需的',
+        min             : '输入太短',
+        max             : '输入太长',
+        number_min      : '太低',
+        number_max      : '太高',
+        url             : '无效的URL',
+        number          : '不是一个数字',
+        email           : '电子邮件地址无效',
+        email_repeat    : '电子邮件不匹配',
+        password_repeat : '密码不匹配',
+        repeat          : '不匹配',
+        complete        : '输入不完整',
+        select          : '请选择一个选项'
     };
 
     if(!window.console){
