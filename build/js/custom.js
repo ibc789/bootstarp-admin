@@ -1778,15 +1778,10 @@ if (typeof NProgress != 'undefined') {
 		}
 
 		function init_datetimepicker() {
-            /*$('#datetimepicker').datetimepicker({
-                format: 'yyyy-mm-dd hh:ii',
-                autoclose: true,
-                language: 'zh-CN',
-                startDate: new Date()
-            });*/
-
+            if( typeof (datetimepicker) === 'undefined'){ return; }
+            console.log('init_datetimepicker');
             $('.datetimepicker').datetimepicker({
-                format: 'yyyy-mm-dd hh:ii',
+                format: 'yyyy-mm-dd HH:ii',
                 autoclose: true,
                 language: 'zh-CN',
                 startDate: new Date()
@@ -1818,7 +1813,7 @@ if (typeof NProgress != 'undefined') {
 	  function init_validator () {
 		 
 		if( typeof (validator) === 'undefined'){ return; }
-		console.log('init_validator'); 
+		console.log('init_validator');
 	  
 	  // initialize the validator function
       validator.message.date = 'not a real date';
@@ -5043,6 +5038,8 @@ if (typeof NProgress != 'undefined') {
 
 		/* UEDITOR */
 		function init_ueditor() {
+            if( typeof (editor) === 'undefined'){ return; }
+            console.log('init_ueditor');
             var ue = UE.getEditor('editor',{autoFloatEnabled:false});
 
             function isFocus(e){
